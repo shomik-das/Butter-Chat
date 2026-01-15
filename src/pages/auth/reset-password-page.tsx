@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 export default function ResetPasswordPage() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ export default function ResetPasswordPage() {
   return (
     <div className="min-h-screen bg-background flex">
       {/* ✅ LOGO — ALWAYS TOP LEFT */}
-      <div className="absolute top-6 left-6 flex items-center gap-2">
+      <div className="absolute top-8 left-8 flex items-center gap-2">
         <img src="/icons/message.svg" alt="ButterChat" className="w-9 h-9" />
         <span className="text-primary text-2xl font-medium">ButterChat</span>
       </div>
@@ -51,10 +52,10 @@ export default function ResetPasswordPage() {
             </form>
 
             {/* 🔙 Back to login */}
-            <p className="mt-4 flex items-center justify-center gap-2 text-xl text-muted-foreground hover:text-primary cursor-pointer">
+            <Link to="/login" className="mt-4 flex items-center justify-center gap-2 text-xl text-muted-foreground hover:text-primary cursor-pointer">
               <ArrowLeft size={16} />
               Back to login
-            </p>
+            </Link>
           </Card>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -47,7 +48,7 @@ export default function LoginPage() {
               <h1 className="text-primary text-3xl font-bold text-center">
                 Login to your account
               </h1>
-              <p className="text-gray-500 text-xl text-center">
+              <p className="text-muted-foreground text-xl text-center">
                 Login to your account.
               </p>
             </div>
@@ -70,9 +71,9 @@ export default function LoginPage() {
               <div className="flex flex-col gap-1">
                 <div className="flex items-center justify-between">
                   <label className="text-primary font-bold">Password</label>
-                  <span className="text-base text-primary font-normal cursor-pointer">
+                  <Link to="/reset-password" className="text-base text-primary font-normal cursor-pointer">
                     Forgot password?
-                  </span>
+                  </Link>
                 </div>
                 <Input
                   name="password"
@@ -81,7 +82,7 @@ export default function LoginPage() {
                   onChange={handleChange}
                   placeholder="••••••••••••"
                 />
-                <p className="text-gray-500 text-sm">
+                <p className="text-muted-foreground text-sm">
                   Must be at least 8 characters
                 </p>
               </div>
@@ -119,14 +120,14 @@ export default function LoginPage() {
               </Button>
             </div>
             {/* Footer */}
-            <p className="text-center text-xl font-normal text-gray-500 mb-4">
+            <p className="text-center text-xl font-normal text-muted-foreground mb-4">
               Don’t have an account?{" "}
-              <span className="underline cursor-pointer">Sign Up</span>
+              <Link to="/signup" className="underline text-muted-foreground cursor-pointer">Sign Up</Link>
             </p>
 
             <Separator className="mb-4" />
 
-            <p className="text-center text-gray-500 text-sm">
+            <p className="text-center text-muted-foreground">
               By clicking continue, you agree to our{" "}
               <span className="underline cursor-pointer">Terms</span> and{" "}
               <span className="underline cursor-pointer">Privacy Policy</span>.

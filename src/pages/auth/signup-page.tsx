@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "react-router-dom";
 
 export default function SignupPage() {
   const [formData, setFormData] = useState({
@@ -50,7 +51,7 @@ export default function SignupPage() {
               <h1 className="text-primary text-3xl font-bold text-center">
                 Create your account
               </h1>
-              <p className="text-gray-500 text-xl text-center">
+              <p className="text-muted-foreground text-xl text-center">
                 Fill in the form below to create your account.
               </p>
             </div>
@@ -109,7 +110,7 @@ export default function SignupPage() {
                   onChange={handleChange}
                   placeholder="••••••••••••"
                 />
-                <p className="text-gray-500 text-sm">
+                <p className="text-muted-foreground text-sm">
                   Must be at least 8 characters
                 </p>
               </div>
@@ -161,14 +162,14 @@ export default function SignupPage() {
               </Button>
             </div>
             {/* Footer */}
-            <p className="text-center text-xl font-normal text-gray-500 mb-4">
+            <p className="text-center text-xl font-normal text-muted-foreground mb-4">
               Already have an account?{" "}
-              <span className="underline cursor-pointer">Sign In</span>
+              <Link to="/login" className="underline text-muted-foreground cursor-pointer">Sign In</Link>
             </p>
 
             <Separator className="mb-4" />
 
-            <p className="text-center text-gray-500 text-sm">
+            <p className="text-center text-muted-foreground text-sm">
               By clicking continue, you agree to our{" "}
               <span className="underline cursor-pointer">Terms</span> and{" "}
               <span className="underline cursor-pointer">Privacy Policy</span>.
