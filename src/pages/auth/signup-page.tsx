@@ -173,8 +173,8 @@ export default function SignupPage() {
 
             <p className="text-center text-gray-500 text-sm">
               By clicking continue, you agree to our{" "}
-              <span className="underline">Terms</span> and{" "}
-              <span className="underline">Privacy Policy</span>.
+              <span className="underline cursor-pointer">Terms</span> and{" "}
+              <span className="underline cursor-pointer">Privacy Policy</span>.
             </p>
           </Card>
         </div>

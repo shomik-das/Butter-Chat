@@ -1,9 +1,10 @@
-import { Button } from "./components/ui/button"
 import SignupPage from "./pages/auth/signup-page"
+import LoginPage from "./pages/auth/login-page"
+
 function App() {
   return (
     <>
-      <SignupPage />
+      <LoginPage />
     </>
   )
 }
