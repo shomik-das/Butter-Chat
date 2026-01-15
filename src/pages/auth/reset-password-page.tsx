@@ -14,7 +14,7 @@ export default function ResetPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex">
+    <div className="min-h-screen bg-background flex flex-col lg:flex-row">
       {/* ✅ LOGO — ALWAYS TOP LEFT */}
       <div className="absolute top-8 left-8 flex items-center gap-2">
         <img src="/icons/message.svg" alt="ButterChat" className="w-9 h-9" />
@@ -22,7 +22,7 @@ export default function ResetPasswordPage() {
       </div>
 
       {/* LEFT SIDE */}
-      <div className="flex-1 flex items-center justify-center px-6">
+      <div className="w-full lg:w-1/2 flex flex-col p-6 lg:p-8 justify-center items-center">
         <div className="w-full max-w-md">
           <Card className="bg-transparent border-0 shadow-none">
             {/* Header */}
@@ -52,7 +52,7 @@ export default function ResetPasswordPage() {
             </form>
 
             {/* 🔙 Back to login */}
-            <Link to="/login" className="mt-4 flex items-center justify-center gap-2 text-xl text-muted-foreground hover:text-primary cursor-pointer">
+            <Link to="/login" className="mt-4 flex items-center justify-center gap-2 text-md text-muted-foreground hover:text-primary cursor-pointer">
               <ArrowLeft size={16} />
               Back to login
             </Link>
@@ -61,7 +61,7 @@ export default function ResetPasswordPage() {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="hidden lg:flex w-1/2 p-4">
+      <div className="hidden lg:flex w-1/2 overflow-hidden rounded-2xl m-4">
         <img
           src="/auth/reset.jpg"
           alt="Reset"
