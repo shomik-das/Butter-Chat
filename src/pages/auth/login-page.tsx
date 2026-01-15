@@ -64,9 +64,6 @@ export default function LoginPage() {
                   onChange={handleChange}
                   placeholder="user@xyzcorp.com"
                 />
-                <p className="text-gray-500 text-sm">
-                  We'll use this to contact you.
-                </p>
               </div>
 
               {/* Password */}
