@@ -43,7 +43,7 @@ export default function SignupPage() {
         </div>
 
         {/* CENTERED FORM */}
-        <div className="flex-1 p-16 flex items-center justify-center">
+        <div className="flex-1 md:p-16 pt-16 flex items-center justify-center">
           <div className="w-full max-w-md">
             <Card className="bg-transparent border-0 shadow-none">
 
@@ -170,7 +170,7 @@ export default function SignupPage() {
               {/* Footer */}
               <p className="text-center text-muted-foreground mb-4">
                 Already have an account?{" "}
-                <Link to="/login" className="underline">
+                <Link to="/login" className="underline text-muted-foreground">
                   Sign in
                 </Link>
               </p>

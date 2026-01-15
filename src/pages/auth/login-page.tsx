@@ -40,7 +40,7 @@ export default function LoginPage() {
         </div>
 
         {/* CENTERED FORM */}
-        <div className="flex-1 p-16 flex items-center justify-center">
+        <div className="flex-1 md:p-16 flex items-center justify-center">
           <div className="w-full max-w-md">
             <Card className="bg-transparent border-0 shadow-none">
 
@@ -128,7 +128,7 @@ export default function LoginPage() {
               {/* Footer */}
               <p className="text-center text-muted-foreground mb-4">
                 Don’t have an account?{" "}
-                <Link to="/signup" className="underline">
+                <Link to="/signup" className="underline text-muted-foreground">
                   Sign up
                 </Link>
               </p>
