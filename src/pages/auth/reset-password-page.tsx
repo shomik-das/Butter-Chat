@@ -65,7 +65,7 @@ export default function ResetPasswordPage() {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="hidden lg:flex w-1/2 p-4">
+      <div className="hidden lg:flex w-1/2 p-2">
         <img
           src="/auth/reset.jpg"
           alt="Reset"

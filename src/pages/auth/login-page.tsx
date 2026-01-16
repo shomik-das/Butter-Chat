@@ -4,8 +4,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+import { Eye, EyeOff } from "lucide-react"
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group"
+
 
 export default function LoginPage() {
+  const [showPassword, setShowPassword] = useState(false)
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -23,7 +28,6 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-background flex">
-
       {/* LEFT SIDE */}
       <div className="w-full lg:w-1/2 min-h-screen flex flex-col p-6 lg:p-8">
 
@@ -86,13 +90,18 @@ export default function LoginPage() {
                       Forgot password?
                     </Link>
                   </div>
-                  <Input
-                    name="password"
-                    type="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    placeholder="••••••••••••"
-                  />
+                  <InputGroup>
+                    <InputGroupInput
+                      name="password"
+                      type={showPassword ? "text" : "password"}
+                      value={formData.password}
+                      onChange={handleChange}
+                      placeholder="••••••••••••"
+                    />
+                    <InputGroupAddon align="inline-end" className="cursor-pointer bg-background h-full rounded-r-md" onClick={() => setShowPassword(!showPassword)}>
+                      {showPassword ? <EyeOff /> : <Eye />}
+                    </InputGroupAddon>
+                  </InputGroup>
                   <p className="text-muted-foreground text-sm">
                     Must be at least 8 characters
                   </p>
@@ -148,7 +157,7 @@ export default function LoginPage() {
       </div>
 
       {/* RIGHT IMAGE */}
-      <div className="hidden lg:flex w-1/2 p-4">
+      <div className="hidden lg:flex w-1/2 p-2">
         <img
           src="/auth/login.jpg"
           alt="Login"
