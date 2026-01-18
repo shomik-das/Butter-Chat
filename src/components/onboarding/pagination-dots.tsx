@@ -6,7 +6,7 @@ interface PaginationDotsProps {
 
 export default function PaginationDots({ currentPage, totalPages, onPageChange }: PaginationDotsProps) {
   return (
-    <div className="flex justify-center gap-2">
+    <div className="flex pb-4 justify-center gap-2">
       {Array.from({ length: totalPages }).map((_, index) => {
         const pageNum = index + 1
         return (

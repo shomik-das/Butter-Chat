@@ -19,7 +19,7 @@ export default function ConnectResourcesCard() {
     { id: "instagram", name: "Connect Instagram", icon: <Instagram className="text-primary-foreground" />, connected: false, category: "social" },
     { id: "whatsapp", name: "Connect Whatsapp", icon: <MessageCircle className="text-primary-foreground" />, connected: false, category: "social" },
     { id: "woocommerce", name: "Integrate WooCommerce", icon: <Handbag className="text-primary-foreground" />, connected: true, category: "ecommerce" },
-    { id: "shopify", name: "Connect Shopify", icon: "🏪", connected: false, category: "ecommerce" },
+    { id: "shopify", name: "Connect Shopify", icon: <Handbag className="text-primary-foreground" />, connected: false, category: "ecommerce" },
   ])
 
   const toggleConnection = (id: string) => {
@@ -90,7 +90,7 @@ export default function ConnectResourcesCard() {
                   <button
                     onClick={() => toggleConnection(connection.id)}
                     className={`rounded-full flex items-center justify-center transition-all ${
-                      connection.connected ? "bg-[#34FC70]" : ""
+                      connection.connected ? "bg-green-500" : ""
                     }`}
                   >
                     {connection.connected ? (
