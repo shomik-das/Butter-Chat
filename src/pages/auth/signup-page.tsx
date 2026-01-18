@@ -37,7 +37,7 @@ export default function SignupPage() {
       <div className="w-full lg:w-1/2 min-h-screen flex flex-col p-6 lg:p-8">
         {/* LOGO */}
         <div className="flex items-center gap-2">
-          <img src="/icons/message.svg" alt="ButterChat" className="w-9 h-9" />
+          <img src="/icons/message.svg" alt="ButterChat" className="w-7 h-7" />
           <span className="text-primary text-2xl font-medium">ButterChat</span>
         </div>
 
@@ -50,7 +50,7 @@ export default function SignupPage() {
                 <h1 className="text-primary text-3xl font-bold text-center">
                   Create your account
                 </h1>
-                <p className="text-muted-foreground text-xl text-center">
+                <p className="text-muted-foreground text-lg text-center">
                   Fill in the form below to create your account.
                 </p>
               </div>
@@ -149,7 +149,7 @@ export default function SignupPage() {
                   />
                 </div>
 
-                <Button className="rounded-lg">Create Account</Button>
+                <Button className="rounded-lg font-medium">Create Account</Button>
               </form>
 
               {/* Divider */}

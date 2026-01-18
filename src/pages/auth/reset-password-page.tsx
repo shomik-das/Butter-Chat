@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowLeft } from "lucide-react";
+import { ChevronLeft } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,7 +18,7 @@ export default function ResetPasswordPage() {
       {/* LEFT SIDE */}
       <div className="w-full lg:w-1/2 min-h-screen flex flex-col p-6 lg:p-8">
         <div className="flex items-center gap-2">
-          <img src="/icons/message.svg" alt="ButterChat" className="w-9 h-9" />
+          <img src="/icons/message.svg" alt="ButterChat" className="w-7 h-7" />
           <span className="text-primary text-2xl font-medium">ButterChat</span>
         </div>
         {/*CENTERED FORM */}
@@ -30,7 +30,7 @@ export default function ResetPasswordPage() {
                 <h1 className="text-primary text-3xl font-bold">
                   Reset Password
                 </h1>
-                <p className="text-muted-foreground text-center">
+                <p className="text-muted-foreground text-lg text-center">
                   Enter your email and we'll send you instructions to reset your
                   password
                 </p>
@@ -48,7 +48,7 @@ export default function ResetPasswordPage() {
                   />
                 </div>
 
-                <Button className="rounded-lg">Send password reset link</Button>
+                <Button className="rounded-lg font-medium">Send password reset link</Button>
               </form>
 
               {/*Back to login */}
@@ -56,7 +56,7 @@ export default function ResetPasswordPage() {
                 to="/login"
                 className="mt-4 flex items-center justify-center gap-2 text-md text-muted-foreground hover:text-primary"
               >
-                <ArrowLeft size={16} />
+                <ChevronLeft/>
                 Back to login
               </Link>
             </Card>

@@ -36,7 +36,7 @@ export default function LoginPage() {
           <img
             src="/icons/message.svg"
             alt="ButterChat"
-            className="w-9 h-9"
+            className="w-7 h-7"
           />
           <span className="text-primary text-2xl font-medium">
             ButterChat
@@ -53,7 +53,7 @@ export default function LoginPage() {
                 <h1 className="text-primary text-3xl font-bold text-center">
                   Login to your account
                 </h1>
-                <p className="text-muted-foreground text-center">
+                <p className="text-muted-foreground text-lg text-center">
                   Login to your account.
                 </p>
               </div>
@@ -107,7 +107,7 @@ export default function LoginPage() {
                   </p>
                 </div>
 
-                <Button className="rounded-lg">
+                <Button className="rounded-lg font-medium">
                   Login
                 </Button>
               </form>
