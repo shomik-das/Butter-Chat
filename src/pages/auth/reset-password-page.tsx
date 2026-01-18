@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, MessageCircle } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,7 +18,8 @@ export default function ResetPasswordPage() {
       {/* LEFT SIDE */}
       <div className="w-full lg:w-1/2 min-h-screen flex flex-col p-6 lg:p-8">
         <div className="flex items-center gap-2">
-          <img src="/icons/message.svg" alt="ButterChat" className="w-7 h-7" />
+          {/* <img src="/icons/message.svg" alt="ButterChat" className="w-7 h-7" /> */}
+          <MessageCircle className="text-primary text-2xl"/>
           <span className="text-primary text-2xl font-medium">ButterChat</span>
         </div>
         {/*CENTERED FORM */}

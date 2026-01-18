@@ -4,13 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Eye, EyeOff, MessageCircle } from "lucide-react"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
 } from "@/components/ui/input-group";
 import { ButtonGroup, ButtonGroupText } from "@/components/ui/button-group";
-import { Link2Icon } from "lucide-react";
+
 
 export default function SignupPage() {
   const [formData, setFormData] = useState({
@@ -20,6 +21,7 @@ export default function SignupPage() {
     password: "",
     confirmPassword: "",
   });
+  const [showPassword, setShowPassword] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -37,7 +39,8 @@ export default function SignupPage() {
       <div className="w-full lg:w-1/2 min-h-screen flex flex-col p-6 lg:p-8">
         {/* LOGO */}
         <div className="flex items-center gap-2">
-          <img src="/icons/message.svg" alt="ButterChat" className="w-7 h-7" />
+          {/* <img src="/icons/message.svg" alt="ButterChat" className="w-7 h-7" /> */}
+          <MessageCircle className="text-primary text-2xl"/>
           <span className="text-primary text-2xl font-medium">ButterChat</span>
         </div>
 
@@ -70,26 +73,6 @@ export default function SignupPage() {
                     placeholder="XYZ Corporation"
                   />
                 </div>
-
-                {/* Subdomain */}
-                {/* <div className="flex flex-col gap-1">
-                  <label className="text-primary font-bold">Subdomain</label>
-                  <div className="flex overflow-hidden rounded-lg border border-border">
-                    <Input
-                      name="subdomain"
-                      value={formData.subdomain}
-                      onChange={handleChange}
-                      placeholder="xyzcorp"
-                      className="rounded-r-none border-0"
-                    />
-                    <Button
-                      type="button"
-                      className="rounded-l-none text-sm border-l"
-                    >
-                      .butterchat.io
-                    </Button>
-                  </div>
-                </div> */}
                 <div className="flex flex-col gap-1">
                   <label className="text-primary font-bold">Subdomain</label>
                   <ButtonGroup className="w-full">
@@ -123,13 +106,18 @@ export default function SignupPage() {
                 {/* Password */}
                 <div className="flex flex-col gap-1">
                   <label className="text-primary font-bold">Password</label>
-                  <Input
-                    name="password"
-                    type="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    placeholder="••••••••••••"
-                  />
+                  <InputGroup>
+                    <InputGroupInput
+                      name="password"
+                      type={showPassword ? "text" : "password"}
+                      value={formData.password}
+                      onChange={handleChange}
+                      placeholder="••••••••••••"
+                    />
+                    <InputGroupAddon align="inline-end" className="cursor-pointer bg-background h-full rounded-r-md" onClick={() => setShowPassword(!showPassword)}>
+                      {showPassword ? <EyeOff /> : <Eye />}
+                    </InputGroupAddon>
+                  </InputGroup>
                   <p className="text-muted-foreground text-sm">
                     Must be at least 8 characters
                   </p>
@@ -140,13 +128,18 @@ export default function SignupPage() {
                   <label className="text-primary font-bold">
                     Confirm Password
                   </label>
-                  <Input
-                    name="confirmPassword"
-                    type="password"
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                    placeholder="••••••••••••"
-                  />
+                  <InputGroup>
+                    <InputGroupInput
+                      name="confirmPassword"
+                      type={showPassword ? "text" : "password"}
+                      value={formData.confirmPassword}
+                      onChange={handleChange}
+                      placeholder="••••••••••••"
+                    />
+                    <InputGroupAddon align="inline-end" className="cursor-pointer bg-background h-full rounded-r-md" onClick={() => setShowPassword(!showPassword)}>
+                      {showPassword ? <EyeOff /> : <Eye />}
+                    </InputGroupAddon>
+                  </InputGroup>
                 </div>
 
                 <Button className="rounded-lg font-medium">Create Account</Button>

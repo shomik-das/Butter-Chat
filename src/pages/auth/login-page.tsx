@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { Eye, EyeOff } from "lucide-react"
+import { Eye, EyeOff, MessageCircle } from "lucide-react"
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group"
 
 
@@ -33,11 +33,8 @@ export default function LoginPage() {
 
         {/* LOGO */}
         <div className="flex items-center gap-2">
-          <img
-            src="/icons/message.svg"
-            alt="ButterChat"
-            className="w-7 h-7"
-          />
+          {/* <img src="/icons/message.svg" alt="ButterChat" className="w-7 h-7"/> */}
+          <MessageCircle className="text-primary text-2xl"/>
           <span className="text-primary text-2xl font-medium">
             ButterChat
           </span>
